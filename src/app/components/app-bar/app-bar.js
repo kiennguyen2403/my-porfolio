@@ -19,7 +19,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation'
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Blog', 'Work'];
+const navItems = ['Home', 'Project', 'About', 'Blog',];
 
 function DrawerAppBar(props) {
     const router = useRouter()
@@ -70,9 +70,9 @@ function DrawerAppBar(props) {
                                 key={item}
                                 sx={{ color: '#fff' }}
                                 onClick={() => {
-                                    if (item === 'Home') 
+                                    if (item === 'Home')
                                         router.push('/');
-                                    else 
+                                    else
                                         router.push(`/${item.toLowerCase()}`)
                                 }}>
                                 {item}
