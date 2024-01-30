@@ -1,5 +1,6 @@
 import { Stack, Typography, Box, Grid } from "@mui/material";
 import ProjectCard from "../project-card/project-card";
+import axios from 'axios';
 
 const projects = [
     {
@@ -98,10 +99,9 @@ export default function Gallery() {
                     Gallery
             </Typography>
             <Box sx={{
-                marginLeft: '2rem',
                 justifyContent: 'center',
                 alignItems: 'center',
-                width: '60vw',
+                width: '80vw',
             }}>
                 <Grid container spacing={2}>
                     {projects.map((project, i) => (
