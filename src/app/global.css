@@ -5,7 +5,5 @@ body {
 }
 
 #root {
-    width: 100%;
-    overflow: auto;
     padding: var(--space-medium);
 }

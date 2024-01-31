@@ -81,7 +81,7 @@ const projects = [
 export default function Gallery() {
     return (
         <Stack
-            spacing='1rem'
+            spacing='3rem'
             sx={{
                 width: '100vw',
                 display: 'flex',
@@ -103,7 +103,7 @@ export default function Gallery() {
                 alignItems: 'center',
                 width: '80vw',
             }}>
-                <Grid container spacing={2}>
+                <Grid container spacing={4}>
                     {projects.map((project, i) => (
                         <Grid item xs={4} sm={6} md={4} key={i}>
                             <ProjectCard
@@ -117,7 +117,6 @@ export default function Gallery() {
                         </Grid>
                     ))}
                 </Grid>
-                
             </Box>
         </Stack>
     );

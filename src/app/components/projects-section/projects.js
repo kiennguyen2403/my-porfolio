@@ -30,6 +30,7 @@ export default function Projects() {
             spacing="2rem"
             sx={{
                 width: '100%',
+                height: '100%',
                 justifyContent: 'center',
                 alignItems: 'center',
             }}>
@@ -37,8 +38,7 @@ export default function Projects() {
                 Projects
             </Typography>
             <Carousel sx={{
-                width: '30vw',
-                height: '30vw',
+                width: '40vw',
                 justifyContent: 'center',
                 alignItems: 'center',
             

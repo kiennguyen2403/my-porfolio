@@ -1,22 +1,21 @@
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Gallery from "./components/gallery/gallery";
 
 
 export default function Work() {
     return (
-        <div style={{
-            width: '100vw',
-            height: '100vh',
+        <Box style={{
+            width: '100%',
+            height: '100%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: '30rem',
+            marginTop: '10rem',
             marginBottom: '10rem',
         }}>
             <Stack
                 spacing='5rem'
                 sx={{
-                    marginBottom: '10rem',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -25,6 +24,6 @@ export default function Work() {
                     <Gallery />
 
             </Stack>
-        </div>
+        </Box>
     )
 }

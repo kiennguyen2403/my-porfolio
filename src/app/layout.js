@@ -2,6 +2,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { Inter } from 'next/font/google';
 import DrawerAppBar from './components/app-bar/app-bar';
 import { Box } from '@mui/material';
+import Footer from './components/footer/footer';
 import ThemeProviderWrapper from '@/styles/theme-provider-wrapper';
 
 
@@ -14,13 +15,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} style={{
+        backgroundColor: 'linear-gradient(to right, #434343 0%, black 100%)'
+      }}>
         <ThemeProviderWrapper options={{ key: 'mui-theme' }}>
           <AppRouterCacheProvider>
             <DrawerAppBar />
-            <Box sx={{ marginTop: 8 }}>
+            <Box>
               {children}
             </Box>
+            <Footer />
           </AppRouterCacheProvider>
         </ThemeProviderWrapper>
       </body>

@@ -8,10 +8,11 @@ import Footer from "./components/footer/footer";
 export default function Home() {
   return (
     <div style={{
-      width: '100vw',
+      width: '100%',
+      height: '100%',
     }}>
       <Stack
-        spacing='5rem'
+        spacing='8rem'
         sx={{
           marginTop: '10rem',
           marginBottom: '10rem',
@@ -25,7 +26,7 @@ export default function Home() {
         <Technologies />
         <Projects />
       </Stack>
-      <Footer />
+   
     </div>
   );
 }
