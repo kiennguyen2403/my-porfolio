@@ -29,7 +29,7 @@ export default function Work({ params }) {
                 justifyContent: 'center',
                 alignItems: 'center',
                 width: '100%',
-                height: '100vh',
+                marginTop: "5rem"
             }}>
                 <MarkDown markdown={projects[id-1].content} />
             </Box>
