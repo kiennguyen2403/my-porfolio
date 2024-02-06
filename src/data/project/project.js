@@ -1,10 +1,14 @@
 export const projects = [
   {
-    title: "Welcome to My GitHub Profile!",
+    title: "Version Flow!",
     content:
       `### VersionFlow: Simplifying Version Management in Miro
 
-VersionFlow is the ultimate solution for Miro users grappling with the complexities of version management in collaborative boards. Say goodbye to the frustration of losing track of ideas in intricate board landscapes. With VersionFlow, you can seamlessly navigate through the evolution of your creative process.
+
+VersionFlow is the ultimate solution for Miro users grappling with the complexities of version management in collaborative boards. Say goodbye to the frustration of losing track of ideas in intricate board landscapes. With VersionFlow, you can seamlessly navigate through the evolution of your creative process. 
+
+
+
 
 ###### Streamlining Collaboration
 
@@ -32,5 +36,9 @@ As we look ahead, our commitment to innovation drives us to enhance *VersionFlow
 - Exploring integrations with other collaborative tools
 
 Join us on this journey as we redefine version control, making collaboration in Miro an effortless and delightful experience.`,
+  },
+  {
+      title: "",
+
   }
 ];
