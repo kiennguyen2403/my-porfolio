@@ -1,44 +1,50 @@
 export const projects = [
   {
-    title: "Version Flow!",
-    content:
-      `### VersionFlow: Simplifying Version Management in Miro
-
-
-VersionFlow is the ultimate solution for Miro users grappling with the complexities of version management in collaborative boards. Say goodbye to the frustration of losing track of ideas in intricate board landscapes. With VersionFlow, you can seamlessly navigate through the evolution of your creative process. 
-
-
-
-
-###### Streamlining Collaboration
-
-Imagine a scenario where your team brainstorms ideas in a Miro board during a meeting. As the board grows in complexity, finding specific drafts becomes a daunting task. *VersionFlow* addresses this challenge by introducing a robust commit and branching system. Users can now attach meaningful commit messages to their ideas, making it effortless to revisit and revise past concepts.
-
-###### Crafting UML Class Diagrams Made Easy
-
-In the realm of complex system design, *VersionFlow* shines when crafting UML class diagrams. Explore various approaches with confidence, thanks to our intuitive branching system. Test different ideas, compare them side by side, and seamlessly transform your preferred concept into an official version on the board.
-
-###### Cutting-Edge Technologies for Seamless Collaboration
-
-Behind VersionFlow's magic are cutting-edge technologies designed to enhance your collaborative experience in Miro. We leverage the following tech stack:
-
-- [Next.js](https://nextjs.org/): A React framework for building web applications.
-- [MongoDB](https://www.mongodb.com/): A NoSQL database for scalable and flexible data storage.
-
-These technologies ensure a smooth and reliable process, empowering teams to focus on creativity rather than version chaos.
-
-###### Continuous Innovation
-
-As we look ahead, our commitment to innovation drives us to enhance *VersionFlow* continuously. Future plans include:
-
-- Refining the user interface
-- Expanding compatibility with new Miro features
-- Exploring integrations with other collaborative tools
-
-Join us on this journey as we redefine version control, making collaboration in Miro an effortless and delightful experience.`,
+    title: "VersionFlow",
+    media: [
+      {
+        img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+        title: 'Breakfast',
+        rows: 2,
+        cols: 2,
+      },
+      {
+        img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+        title: 'Burger',
+      },
+      {
+        img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+        title: 'Camera',
+      },
+      {
+        img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+        title: 'Coffee',
+        cols: 2,
+      },
+      {
+        img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+        title: 'Hats',
+        cols: 2,
+      },
+      {
+        img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+        title: 'Honey',
+        author: '@arwinneil',
+        rows: 2,
+        cols: 2,
+      },
+    ],
+    github: "https://github.com/kiennguyen2403/VersionFlow",
+    deploy: "",
+    content: "VersionFlow is the ultimate solution for Miro users grappling with the complexities of version management in collaborative boards. Say goodbye to the frustration of losing track of ideas in intricate board landscapes. With VersionFlow, you can seamlessly navigate through the evolution of your creative process. magine a scenario where your team brainstorms ideas in a Miro board during a meeting. As the board grows in complexity, finding specific drafts becomes a daunting task. VersionFlow addresses this challenge by introducing a robust commit and branching system. Users can now attach meaningful commit messages to their ideas, making it effortless to revisit and revise past concepts.",
+    technologies: [
+      "NextJS",
+      "MongoDB",
+      "Miro API",
+    ]
   },
   {
-      title: "",
-
-  }
+    title: "Your Second Project Title",
+    content: `Your second project content goes here.`,
+  },
 ];

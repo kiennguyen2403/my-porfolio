@@ -53,13 +53,13 @@ export default function Achievement() {
                         <ListItemButton key={index}>
                             <ListItemText primary={item.name} secondary={
                                 <Stack>
-                                    <Typography variant="subtitle1">
+                                    <Typography variant="subtitle2">
                                         {item.date}
                                     </Typography>
                                     <Typography variant="subtitle2">
                                         Issued by {item.issue}
                                     </Typography>
-                                    <Typography variant="body1">
+                                    <Typography variant="subtitle1" color="HighlightText" fontSize={14}>
                                         {item.description}
                                     </Typography>
                                 </Stack>
