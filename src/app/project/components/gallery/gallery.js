@@ -10,7 +10,7 @@ const projects = [
         title: 'Project 1',
         description: 'This is a description for project 1',
         image: './vercel.svg',
-        link: variable.URL + variable.PORT + '/project/1',
+        link: variable.URL + '/project/1',
         status: 'completed',
     },
     {
@@ -18,7 +18,7 @@ const projects = [
         title: 'Project 2',
         description: 'This is a description for project 2',
         image: './vercel.svg',
-        link: variable.URL + variable.PORT + '/project/2',
+        link: variable.URL + '/project/2',
         status: 'in-progress',
     },
     {
@@ -26,7 +26,7 @@ const projects = [
         title: 'Project 3',
         description: 'This is a description for project 3',
         image: './vercel.svg',
-        link: variable.URL + variable.PORT + '/project/3',
+        link: variable.URL + '/project/3',
         status: 'in-progress',
     },
     {
@@ -34,7 +34,7 @@ const projects = [
         title: 'Project 4',
         description: 'This is a description for project 4',
         image: './vercel.svg',
-        link: variable.URL + variable.PORT + '/project/4',
+        link: variable.URL + '/project/4',
         status: 'in-progress',
     },
     {
@@ -42,7 +42,7 @@ const projects = [
         title: 'Project 5',
         description: 'This is a description for project 5',
         image: './vercel.svg',
-        link: variable.URL + variable.PORT + '/project/5',
+        link: variable.URL + '/project/5',
         status: 'planned',
     },
     {
@@ -50,7 +50,7 @@ const projects = [
         title: 'Project 6',
         description: 'This is a description for project 6',
         image: './vercel.svg',
-        link: variable.URL + variable.PORT + '/project/6',
+        link: variable.URL + '/project/6',
         status: 'in-progress',
     },
     {
@@ -58,7 +58,7 @@ const projects = [
         title: 'Project 7',
         description: 'This is a description for project 7',
         image: './vercel.svg',
-        link: variable.URL + variable.PORT + '/project/7',
+        link: variable.URL + '/project/7',
         status: 'in-progress',
     },
     {
@@ -66,7 +66,7 @@ const projects = [
         title: 'Project 8',
         description: 'This is a description for project 8',
         image: './vercel.svg',
-        link: variable.URL + variable.PORT + '/project/8',
+        link: variable.URL + '/project/8',
         status: 'in-progress',
     },
     {
@@ -74,7 +74,7 @@ const projects = [
         title: 'Project 9',
         description: 'This is a description for project 9',
         image: './vercel.svg',
-        link: variable.URL + variable.PORT + '/project/9',
+        link: variable.URL + '/project/9',
         status: 'in-progress',
     },
 ]
@@ -98,7 +98,7 @@ export default function Gallery() {
                     width: '100vw',
                     textAlign: 'center',
                 }}>
-                    Gallery
+                Gallery
             </Typography>
             <Box sx={{
                 justifyContent: 'center',
