@@ -10,7 +10,7 @@ const Loading = () => {
             {/* For variant="text", adjust the height via font-size */}
 
             {/* For other variants, adjust the size with `width` and `height` */}
-            <Stack spacing={12} sx={{ margin: "auto", textAlign: "center" }} direction="row">
+            <Stack spacing={12} sx={{ margin: "auto", alignItems: "center", alignContent: "center" }} direction="row">
                 <Skeleton variant="text" sx={{ fontSize: '4rem', textAlign: "center" }} width="30%" />
                 <Skeleton variant="circular" width="6rem" height="6rem" />
             </Stack>

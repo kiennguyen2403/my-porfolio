@@ -16,7 +16,7 @@ export default function ProjectCard({ title, description, image, link }) {
             sx={{
                 width: '100%',
                 height: '100%',
-                borderRadius: '2rem',
+                borderRadius: '1rem',
                 boxShadow: '0 0 1rem rgba(0,0,0,0.2)',
             }}
         >

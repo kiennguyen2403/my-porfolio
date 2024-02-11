@@ -24,7 +24,14 @@ export default function RootLayout({ children }) {
             <Box>
               {children}
             </Box>
-            <Footer />
+            <div style={{
+              bottom: 0,
+              width: '100%',
+            
+            }}>
+              <Footer />
+            </div>
+            
           </AppRouterCacheProvider>
         </ThemeProviderWrapper>
       </body>

@@ -11,7 +11,7 @@ const projects = [
         description: 'This is a description for project 1',
         image: './vercel.svg',
         link: variable.URL + variable.PORT + '/project/1',
-        status: 'in-progress',
+        status: 'completed',
     },
     {
         id: 2,
@@ -43,7 +43,7 @@ const projects = [
         description: 'This is a description for project 5',
         image: './vercel.svg',
         link: variable.URL + variable.PORT + '/project/5',
-        status: 'in-progress',
+        status: 'planned',
     },
     {
         id: 6,

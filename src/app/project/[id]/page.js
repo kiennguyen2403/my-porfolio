@@ -4,7 +4,7 @@ import MarkDown from "./components/markdown/markdown";
 import { projects } from "@/data/project/project";
 import Image from "next/image";
 import { GitHub, Link } from "@mui/icons-material";
-
+import TechnologyCard from "@/app/components/technology-card/technology-card";
 
 export default function Work({ params }) {
     const id = params.id;
@@ -15,7 +15,7 @@ export default function Work({ params }) {
                 justifyContent: 'center',
                 alignItems: 'center',
                 width: '100%',
-                height: '100vh',
+                height: '100%',
             }}>
                 <Typography
                     variant="h4"
@@ -38,7 +38,7 @@ export default function Work({ params }) {
                     width: '80vw',
                     display: 'flex',
                     direction: 'column',
-    
+
                 }}>
                     <Typography
                         variant="h4"
@@ -72,8 +72,8 @@ export default function Work({ params }) {
                                         width: '100%',
                                     }}
                                 >
-                                    <Link/>
-                                </IconButton> 
+                                    <Link />
+                                </IconButton>
                                 : null
                         }
                     </Stack>
@@ -93,39 +93,41 @@ export default function Work({ params }) {
                             ))}
                         </ImageList> : null
                     } */}
-                    <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{
-                            width: '100%',
-                            textAlign: 'left',
-                        }}>
-                        Description
-                    </Typography>
-                    <Typography>
-                        {projects[id - 1].content}
-                    </Typography>
-                    <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{
-                            width: '100%',
-                            textAlign: 'left',
-                        }}>
-                        Technologies
-                    </Typography>
-                    {projects[id - 1]?.technologies?.map((item) => (
+                    <Box sx={{ width: '100%' }}>
                         <Typography
-                            key={item}
-                            variant="body1"
+                            variant="h6"
+                            component="div"
+                            sx={{
+                                width: '100%',
+                                textAlign: 'left',
+                                marginTop: '1rem',
+                                marginBottom: '1rem',
+                            }}>
+                            Description
+                        </Typography>
+                        <Typography>
+                            {projects[id - 1].content}
+                        </Typography>
+                    </Box>
+                    <Box>
+                        <Typography
+                            variant="h6"
                             component="div"
                             sx={{
                                 width: '100%',
                                 textAlign: 'left',
                             }}>
-                            {item}
+                            Technologies
                         </Typography>
-                    ))}
+                        <Stack spacing={1}
+                            direction="row" sx={{
+                               marginTop: '1rem',
+                            }}>
+                            {projects[id - 1]?.technologies?.map((item) => (
+                                <TechnologyCard key={item} technology={item} />
+                            ))}
+                        </Stack>
+                    </Box>
                 </Stack>
             </Box>
         );

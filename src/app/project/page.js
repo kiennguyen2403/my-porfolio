@@ -22,7 +22,6 @@ export default function Work() {
                     width: '100%',
                 }}>
                     <Gallery />
-
             </Stack>
         </Box>
     )
