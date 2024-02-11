@@ -5,28 +5,28 @@ import Technologies from "./components/technologies-section/technologies";
 import Projects from "./components/projects-section/projects";
 import Grow from '@mui/material/Grow';
 import Footer from "./components/footer/footer";
+import Scroller from "./components/scroller/scroller";
 export default function Home() {
   return (
     <div style={{
       width: '100%',
       height: '100%',
     }}>
-      <Stack
-        spacing='8rem'
-        sx={{
-          marginTop: '10rem',
-          marginBottom: '10rem',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '100%',
-        }}>
-        <InformationSection />
-        <AboutMe />
-        <Technologies />
-        <Projects />
-      </Stack>
-   
+        <Stack
+          spacing='8rem'
+          sx={{
+            marginTop: '10rem',
+            marginBottom: '10rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%',
+          }}>
+          <InformationSection id="information" />
+          <AboutMe id="aboutme" />
+          <Technologies id="technologies" />
+          <Projects id="projects" />
+        </Stack>
     </div>
   );
 }

@@ -6,6 +6,7 @@ export default function Layout({ children }) {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            marginBottom: '8rem'
         }}>
             {children}
         </div>

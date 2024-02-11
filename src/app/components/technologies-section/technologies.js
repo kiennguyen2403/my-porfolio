@@ -71,7 +71,7 @@ const technologies =
             technologies: 'GCP',
             imageUrl: '/images/gcp.png'
         }
-       
+
     ],
     devops: [
         {
@@ -89,9 +89,10 @@ const technologies =
     ]
 }
 
-export default function Technologies() {
+export default function Technologies({ id }) {
     return (
         <Stack
+            id={id}
             spacing="0.8rem"
             sx={{
                 width: '100%',

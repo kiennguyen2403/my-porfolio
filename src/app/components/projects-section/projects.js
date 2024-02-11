@@ -24,9 +24,10 @@ const projects = [
         link: 'https://google.com',
     },
 ]
-export default function Projects() {    
+export default function Projects({ id }) {
     return (
         <Stack
+            id={id}
             spacing="2rem"
             sx={{
                 width: '100%',
@@ -41,7 +42,7 @@ export default function Projects() {
                 width: '40vw',
                 justifyContent: 'center',
                 alignItems: 'center',
-            
+
             }}>
                 {projects.map((project, index) => (
                     <ProjectCard

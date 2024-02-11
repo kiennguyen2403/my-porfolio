@@ -16,7 +16,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className} style={{
-        backgroundColor: 'linear-gradient(to right, #434343 0%, black 100%)'
+        background: 'linear-gradient(to right, #434343 0%, black 100%)',
+        overflowX: 'hidden',
+        overflowY: 'auto',
       }}>
         <ThemeProviderWrapper options={{ key: 'mui-theme' }}>
           <AppRouterCacheProvider>
@@ -27,7 +29,6 @@ export default function RootLayout({ children }) {
             <div style={{
               bottom: 0,
               width: '100%',
-            
             }}>
               <Footer />
             </div>

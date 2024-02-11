@@ -8,15 +8,17 @@ import SummarizeIcon from '@mui/icons-material/Summarize';
 import EmailIcon from '@mui/icons-material/Email';
 
 
-export default function InformationSection() {
+export default function InformationSection({ id }) {
     return (
-        <Box sx={{
-            display: 'flex',
-            direction: 'row',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            width: '100%',
-        }}>
+        <Box
+            id={id}
+            sx={{
+                display: 'flex',
+                direction: 'row',
+                justifyContent: 'space-around',
+                alignItems: 'center',
+                width: '100%',
+            }}>
             <Stack spacing={2} direction="column" sx={{
                 alignItems: 'start',
 

@@ -1,8 +1,9 @@
 import { Typography, Box, Stack } from "@mui/material";
 
-export default function AboutMe() {
+export default function AboutMe({ id }) {
     return (
         <Stack
+            id={id}
             spacing='1rem'
             sx={{
                 width: '100vw',
