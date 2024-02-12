@@ -1,7 +1,8 @@
 "use client";
-
-import { Stack, Typography, Box } from "@mui/material";
+import { useState } from "react";
+import { Stack, Typography, Box, Fade } from "@mui/material";
 import ExperienceTree from "../timeline/timeline";
+import VizSensor from 'react-visibility-sensor';
 
 const data = [
     {
@@ -17,32 +18,39 @@ const data = [
 ];
 
 export default function Education() {
+    const [isVisible, setIsVisible] = useState(false);
     return (
-        <Stack
-            spacing='1rem'
-            sx={{
-                width: '100vw',
-                display: 'flex',
-                direction: 'row',
-                alignItems: 'center',
-                margin: "auto"
-            }}>
-            <Typography
-                variant="h4"
-                component="div"
-                sx={{
-                    width: '100vw',
-                    textAlign: 'center',
-                }}>
-                Education
-            </Typography>
-            <Box sx={{
-                justifyContent: 'center',
-                alignItems: 'center',
-                width: '80vw',
-            }}>
-                <ExperienceTree data={data}/>
-            </Box>
-        </Stack>
+        <VizSensor onChange={() => {
+            setIsVisible(true);
+        }}>
+            <Fade in={isVisible} timeout={1000}>
+                <Stack
+                    spacing='1rem'
+                    sx={{
+                        width: '100vw',
+                        display: 'flex',
+                        direction: 'row',
+                        alignItems: 'center',
+                        margin: "auto"
+                    }}>
+                    <Typography
+                        variant="h4"
+                        component="div"
+                        sx={{
+                            width: '100vw',
+                            textAlign: 'center',
+                        }}>
+                        Education
+                    </Typography>
+                    <Box sx={{
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: '80vw',
+                    }}>
+                        <ExperienceTree data={data} />
+                    </Box>
+                </Stack>
+            </Fade>
+        </VizSensor>
     );
 }

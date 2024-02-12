@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Stack, Typography, Box, List, ListItemButton, ListItemText } from "@mui/material";
+import { Stack, Typography, Box, List, ListItemButton, ListItemText, Fade } from "@mui/material";
+import VizSensor from 'react-visibility-sensor';
 
 const data = [
     {
@@ -18,6 +19,7 @@ const data = [
 ];
 export default function Achievement() {
     const [isClient, setIsClient] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
         setIsClient(true);
     }, []);
@@ -25,49 +27,55 @@ export default function Achievement() {
         return null;
     }
     return (
-        <Stack
-            spacing='1rem'
-            sx={{
-                width: '100vw',
-                display: 'flex',
-                direction: 'row',
-                alignItems: 'center',
-                margin: "auto"
-            }}>
-            <Typography
-                variant="h4"
-                component="div"
-                sx={{
-                    width: '100vw',
-                    textAlign: 'center',
-                }}>
-                HONORS & AWARDS
-            </Typography>
-            <Box sx={{
-                justifyContent: 'center',
-                alignItems: 'center',
-                width: '80vw',
-            }}>
-                <List component="nav" aria-label="secondary mailbox folder">
-                    {data.map((item, index) => (
-                        <ListItemButton key={index}>
-                            <ListItemText primary={item.name} secondary={
-                                <Stack>
-                                    <Typography variant="subtitle2">
-                                        {item.date}
-                                    </Typography>
-                                    <Typography variant="subtitle2">
-                                        Issued by {item.issue}
-                                    </Typography>
-                                    <Typography variant="subtitle1" color="HighlightText" fontSize={14}>
-                                        {item.description}
-                                    </Typography>
-                                </Stack>
-                            } />
-                        </ListItemButton>
-                    ))}
-                </List>
-            </Box>
-        </Stack>
+        <VizSensor onChange={() => {
+            setIsClient(true);
+        }}>
+            <Fade in={isVisible} timeout={1000}>
+                <Stack
+                    spacing='1rem'
+                    sx={{
+                        width: '100vw',
+                        display: 'flex',
+                        direction: 'row',
+                        alignItems: 'center',
+                        margin: "auto"
+                    }}>
+                    <Typography
+                        variant="h4"
+                        component="div"
+                        sx={{
+                            width: '100vw',
+                            textAlign: 'center',
+                        }}>
+                        HONORS & AWARDS
+                    </Typography>
+                    <Box sx={{
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: '80vw',
+                    }}>
+                        <List component="nav" aria-label="secondary mailbox folder">
+                            {data.map((item, index) => (
+                                <ListItemButton key={index}>
+                                    <ListItemText primary={item.name} secondary={
+                                        <Stack>
+                                            <Typography variant="subtitle2">
+                                                {item.date}
+                                            </Typography>
+                                            <Typography variant="subtitle2">
+                                                Issued by {item.issue}
+                                            </Typography>
+                                            <Typography variant="subtitle1" color="HighlightText" fontSize={14}>
+                                                {item.description}
+                                            </Typography>
+                                        </Stack>
+                                    } />
+                                </ListItemButton>
+                            ))}
+                        </List>
+                    </Box>
+                </Stack>
+            </Fade>
+        </VizSensor>
     );
 }
