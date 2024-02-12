@@ -32,13 +32,19 @@ export default function InformationSection({ id }) {
                         Resume
                     </Button>
 
-                    <IconButton>
+                    <IconButton onClick={() => {
+                        window.open("https://github.com/kiennguyen2403");
+                    }}>
                         <GitHubIcon />
                     </IconButton>
-                    <IconButton>
+                    <IconButton onClick={() => {
+                        window.open("https://www.linkedin.com/in/kiennguyen2403/");
+                    }}>
                         <LinkedInIcon />
                     </IconButton>
-                    <IconButton>
+                    <IconButton onClick={() => {
+                        window.open("mailto:kientdn2403@gmail.com");
+                    }}>
                         <EmailIcon />
                     </IconButton>
                 </Stack>
