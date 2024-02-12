@@ -124,6 +124,7 @@ export default function Work({ params }) {
                                marginTop: '1rem',
                             }}>
                             {projects[id - 1]?.technologies?.map((item) => (
+                                // <TechnologyCard key={item} technology={item} />
                                 <TechnologyCard key={item} technology={item} />
                             ))}
                         </Stack>
