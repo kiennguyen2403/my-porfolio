@@ -1,5 +1,5 @@
-import { Box, Card, Chip, Paper, Typography } from "@mui/material";
-import Image from "next/image";
+import { Chip } from "@mui/material";
+
 
 
 export default function TechnologyCard({ technology }) {
