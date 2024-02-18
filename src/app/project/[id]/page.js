@@ -78,8 +78,8 @@ export default function Work({ params }) {
                         }
                     </Stack>
                     <Divider sx={{ width: '100%' }} />
-                    {/* {
-                        projects[id - 1].media ? 
+                    {
+                        projects?.[id - 1]?.media ? 
                         <ImageList cols={3} rowHeight={200} sx={{ width: '100%' }}>
                             {projects[id - 1].media.map((item) => (
                                 <Image
@@ -92,7 +92,7 @@ export default function Work({ params }) {
                                 />
                             ))}
                         </ImageList> : null
-                    } */}
+                    }
                     <Box sx={{ width: '100%' }}>
                         <Typography
                             variant="h6"

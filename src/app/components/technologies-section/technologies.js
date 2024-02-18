@@ -97,7 +97,6 @@ export default function Technologies({ id }) {
 
     return (
         <VizSensor
-            scrollCheck
             onChange={(isVisible) => {
                 setIsVisible(isVisible);
             }}>

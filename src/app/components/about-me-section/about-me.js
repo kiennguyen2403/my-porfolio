@@ -7,7 +7,7 @@ export default function AboutMe({ id }) {
     const [isVisible, setIsVisible] = useState(false)
     return (
         <VizSensor onChange={(isVisible) => {
-            setIsVisible(isVisible);
+            setIsVisible(true);
         }}>
             <Fade in={isVisible} timeout={1000}>
                 <Stack
@@ -26,11 +26,6 @@ export default function AboutMe({ id }) {
                         sx={{
                             width: '100vw',
                             textAlign: 'center',
-                            // textDecoration: 'none',
-                            // transition: 'text-decoration 0.8s ease-in-out',
-                            // '&:hover': {
-                            //     textDecoration: 'underline',
-                            // },
                         }}>
                         About Me
                     </Typography>
