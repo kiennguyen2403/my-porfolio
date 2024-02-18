@@ -97,8 +97,9 @@ export default function Technologies({ id }) {
 
     return (
         <VizSensor
-            onChange={() => {
-                setIsVisible(true);
+            scrollCheck
+            onChange={(isVisible) => {
+                setIsVisible(isVisible);
             }}>
             <Fade in={isVisible} timeout={1000}>
                 <Stack

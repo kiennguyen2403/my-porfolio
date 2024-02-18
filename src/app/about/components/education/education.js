@@ -20,8 +20,8 @@ const data = [
 export default function Education() {
     const [isVisible, setIsVisible] = useState(false);
     return (
-        <VizSensor onChange={() => {
-            setIsVisible(true);
+        <VizSensor onChange={(isVisible) => {
+            setIsVisible(isVisible);
         }}>
             <Fade in={isVisible} timeout={1000}>
                 <Stack

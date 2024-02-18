@@ -6,8 +6,8 @@ import VizSensor from 'react-visibility-sensor';
 export default function AboutMe({ id }) {
     const [isVisible, setIsVisible] = useState(false)
     return (
-        <VizSensor onChange={() => {
-            setIsVisible(true);
+        <VizSensor onChange={(isVisible) => {
+            setIsVisible(isVisible);
         }}>
             <Fade in={isVisible} timeout={1000}>
                 <Stack

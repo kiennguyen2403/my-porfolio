@@ -23,12 +23,13 @@ export default function Achievement() {
     useEffect(() => {
         setIsClient(true);
     }, []);
+    
     if (!isClient) {
         return null;
     }
     return (
-        <VizSensor onChange={() => {
-            setIsClient(true);
+        <VizSensor onChange={(isVisible) => {
+            setIsVisible(isVisible);
         }}>
             <Fade in={isVisible} timeout={1000}>
                 <Stack

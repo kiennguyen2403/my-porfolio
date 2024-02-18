@@ -3,9 +3,7 @@ import InformationSection from "./components/information-section/information-sec
 import AboutMe from "./components/about-me-section/about-me";
 import Technologies from "./components/technologies-section/technologies";
 import Projects from "./components/projects-section/projects";
-import Grow from '@mui/material/Grow';
-import Footer from "./components/footer/footer";
-import Scroller from "./components/scroller/scroller";
+
 export default function Home() {
   return (
     <div style={{
