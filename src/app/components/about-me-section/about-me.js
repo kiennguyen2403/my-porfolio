@@ -4,7 +4,7 @@ import { Typography, Box, Stack, Fade } from "@mui/material";
 import VizSensor from 'react-visibility-sensor';
 
 export default function AboutMe({ id }) {
-    const [isVisible, setIsVisible] = useState(false)
+    const [isVisible, setIsVisible] = useState(false);
     return (
         <VizSensor onChange={(isVisible) => {
             setIsVisible(isVisible);

@@ -25,7 +25,6 @@ export default function Home() {
         <InformationSection />
         <AboutMe />
         <Technologies />
-        <Technologies />
         <Projects />
       </Stack>
     </Box>

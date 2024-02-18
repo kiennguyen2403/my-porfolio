@@ -1,10 +1,11 @@
 "use client";
-import { Box, Button, Divider, IconButton, ImageList, Stack, Typography } from "@mui/material";
+import { Box, Button, Divider, IconButton, ImageList, Stack, Typography, ImageListItem } from "@mui/material";
 import MarkDown from "./components/markdown/markdown";
 import { projects } from "@/data/project/project";
 import Image from "next/image";
 import { GitHub, Link } from "@mui/icons-material";
 import TechnologyCard from "@/app/components/technology-card/technology-card";
+import YouTube from "react-youtube";
 
 export default function Work({ params }) {
     const id = params.id;
@@ -79,19 +80,19 @@ export default function Work({ params }) {
                     </Stack>
                     <Divider sx={{ width: '100%' }} />
                     {
-                        projects?.[id - 1]?.media ? 
-                        <ImageList cols={3} rowHeight={164} sx={{ width: '100%' }}>
-                            {projects[id - 1].media.map((item) => (
-                                <Image
-                                    width={164}
-                                    height={164}
-                                    key={item.title}
-                                    src={item.img}
-                                    alt={item.title}
-                                    loading="lazy"
-                                />
-                            ))}
-                        </ImageList> : null
+                        projects?.[id - 1]?.mediaID
+                            ? <YouTube 
+                            videoId={projects[id - 1].mediaID}
+                            opts={{
+                                height: '390',
+                                width: '640',
+                                borderRadius: '10px',
+                                playerVars: {
+                                    // https://developers.google.com/youtube/player_parameters
+                                    autoplay: 1,
+                                },
+                            }}/> 
+                        : null
                     }
                     <Box sx={{ width: '100%' }}>
                         <Typography
@@ -121,7 +122,7 @@ export default function Work({ params }) {
                         </Typography>
                         <Stack spacing={1}
                             direction="row" sx={{
-                               marginTop: '1rem',
+                                marginTop: '1rem',
                             }}>
                             {projects[id - 1]?.technologies?.map((item) => (
                                 <TechnologyCard key={item} technology={item} />

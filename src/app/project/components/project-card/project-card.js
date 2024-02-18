@@ -6,10 +6,12 @@ import {
     CardActions,
     Typography,
     Button,
-    Chip
+    Chip,
+    Grow
 } from "@mui/material";
+import React, { useState } from "react";
 import { useRouter } from 'next/navigation'
-
+import VizSensor from 'react-visibility-sensor';
 
 const Status = {
     'in-progress': <Chip label="In Progress" variant="outlined" color="warning" sx={{
@@ -27,41 +29,48 @@ const Status = {
 }
 
 export default function ProjectCard({ title, description, image, link, status }) {
-    const router = useRouter()
+    const router = useRouter();
+    const [isVisible, setIsVisible] = useState(false);
     return (
-        <Card
-            sx={{
-                width: '100%',
-                height: '100%',
-                borderRadius: '1rem',
-                boxShadow: '0 0 1rem rgba(0,0,0,0.2)',
-            }}
-        >
-            <CardMedia
-                component="img"
-                alt="green iguana"
-                height="130"
-                image="./vercel.svg"
-            />
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    {title}
-                </Typography>
-                {Status[status]}
-                <Typography variant="body2" color="text.secondary">
-                    {description}
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small" onClick={()=>{
-                    if (link)
-                        router.push(link)
-                }}>
-                    <Typography variant="body2" color="text.secondary">
-                        Learn More
-                    </Typography>
-                </Button>
-            </CardActions>
-        </Card>
+        <VizSensor onChange={(isVisible) => {
+            setIsVisible(isVisible);
+        }}>
+            <Grow in={isVisible} timeout={1000}>
+                <Card
+                    sx={{
+                        width: '100%',
+                        height: '100%',
+                        borderRadius: '1rem',
+                        boxShadow: '0 0 1rem rgba(0,0,0,0.2)',
+                    }}
+                >
+                    <CardMedia
+                        component="img"
+                        alt="green iguana"
+                        height="130"
+                        image="./vercel.svg"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            {title}
+                        </Typography>
+                        {Status[status]}
+                        <Typography variant="body2" color="text.secondary">
+                            {description}
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button size="small" onClick={() => {
+                            if (link)
+                                router.push(link)
+                        }}>
+                            <Typography variant="body2" color="text.secondary">
+                                Learn More
+                            </Typography>
+                        </Button>
+                    </CardActions>
+                </Card>
+            </Grow>
+        </VizSensor>
     )
 }
