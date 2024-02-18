@@ -23,16 +23,21 @@ export default function RootLayout({ children }) {
         <ThemeProviderWrapper options={{ key: 'mui-theme' }}>
           <AppRouterCacheProvider>
             <DrawerAppBar />
-            <Box>
+            <div style={{
+              width: '100vw',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
               {children}
-            </Box>
+            </div>
             <div style={{
               bottom: 0,
               width: '100%',
             }}>
               <Footer />
             </div>
-            
+
           </AppRouterCacheProvider>
         </ThemeProviderWrapper>
       </body>

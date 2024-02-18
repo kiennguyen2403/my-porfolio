@@ -1,7 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import InformationSection from "../components/information-section/information-section";
 import AboutMe from "../components/about-me-section/about-me";
-import CommitHistory from "./components/commit-history/commit-history";
 import Technologies from "../components/technologies-section/technologies";
 import Experience from "./components/experience/experience";
 import Education from "./components/education/education";

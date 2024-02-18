@@ -80,11 +80,11 @@ export default function Work({ params }) {
                     <Divider sx={{ width: '100%' }} />
                     {
                         projects?.[id - 1]?.media ? 
-                        <ImageList cols={3} rowHeight={200} sx={{ width: '100%' }}>
+                        <ImageList cols={3} rowHeight={164} sx={{ width: '100%' }}>
                             {projects[id - 1].media.map((item) => (
                                 <Image
-                                    width={200}
-                                    height={200}
+                                    width={164}
+                                    height={164}
                                     key={item.title}
                                     src={item.img}
                                     alt={item.title}

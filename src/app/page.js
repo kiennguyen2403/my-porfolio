@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Stack, Box } from "@mui/material";
 import InformationSection from "./components/information-section/information-section";
 import AboutMe from "./components/about-me-section/about-me";
 import Technologies from "./components/technologies-section/technologies";
@@ -6,9 +6,11 @@ import Projects from "./components/projects-section/projects";
 
 export default function Home() {
   return (
-    <div style={{
+    <Box sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
       width: '100%',
-      height: '100%',
     }}>
       <Stack
         spacing='8rem'
@@ -20,11 +22,12 @@ export default function Home() {
           alignItems: 'center',
           width: '100%',
         }}>
-        <InformationSection id="information" />
-        <AboutMe id="aboutme" />
-        <Technologies id="technologies" />
-        <Projects id="projects" />
+        <InformationSection />
+        <AboutMe />
+        <Technologies />
+        <Technologies />
+        <Projects />
       </Stack>
-    </div>
+    </Box>
   );
 }

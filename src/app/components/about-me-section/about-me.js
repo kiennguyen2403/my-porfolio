@@ -7,7 +7,7 @@ export default function AboutMe({ id }) {
     const [isVisible, setIsVisible] = useState(false)
     return (
         <VizSensor onChange={(isVisible) => {
-            setIsVisible(true);
+            setIsVisible(isVisible);
         }}>
             <Fade in={isVisible} timeout={1000}>
                 <Stack
