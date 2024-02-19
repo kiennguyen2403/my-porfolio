@@ -56,7 +56,7 @@ export const projects = [
     status: "completed",
     link: variable.URL + '/project/4',
     github: "https://github.com/daothanhduy305/miachan_go_strapi",
-    deploy : "",
+    deploy: "https://miachango.duydao.org/?fbclid=IwAR3t8Pzq3df6JSjfi6IdjXqNHVN054-ctcfyQ7eqcbxs3izsvLEOaw48_lM",
     technologies: [
       "Flutter",
       "Strapi",
