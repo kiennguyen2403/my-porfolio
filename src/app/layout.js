@@ -5,7 +5,6 @@ import { Box } from '@mui/material';
 import Footer from './components/footer/footer';
 import ThemeProviderWrapper from '@/styles/theme-provider-wrapper';
 
-
 const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: "My Porfolio",

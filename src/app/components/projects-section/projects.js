@@ -2,28 +2,9 @@
 import { Stack, Typography } from "@mui/material";
 import ProjectCard from "../project-card/project-card";
 import Carousel from "react-material-ui-carousel";
+import { projects } from "@/data/project/project";
 
 
-const projects = [
-    {
-        title: 'Project 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, dolorum.',
-        imageUrl: '/images/project1.png',
-        link: 'https://google.com',
-    },
-    {
-        title: 'Project 2',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, dolorum.',
-        imageUrl: '/images/project2.png',
-        link: 'https://google.com',
-    },
-    {
-        title: 'Project 3',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, dolorum.',
-        imageUrl: '/images/project3.png',
-        link: 'https://google.com',
-    },
-]
 export default function Projects({ id }) {
     return (
         <Stack
@@ -42,14 +23,14 @@ export default function Projects({ id }) {
                 width: '40vw',
                 justifyContent: 'center',
                 alignItems: 'center',
-
             }}>
                 {projects.map((project, index) => (
                     <ProjectCard
                         key={index}
                         title={project.title}
-                        description={project.description}
-                        imageUrl={project.imageUrl}
+                        description={project.content.slice(0, 120) + '...'}
+                        image={project.image}
+                        link={project.link}
                     />
                 ))}
             </Carousel>

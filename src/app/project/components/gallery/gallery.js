@@ -1,83 +1,83 @@
 import { Stack, Typography, Box, Grid } from "@mui/material";
 import ProjectCard from "../project-card/project-card";
 import { variable } from "@/app/lib/variable";
+import { projects } from "@/data/project/project";
 import axios from 'axios';
 
-
-const projects = [
-    {
-        id: 1,
-        title: 'Project 1',
-        description: 'This is a description for project 1',
-        image: './vercel.svg',
-        link: variable.URL + '/project/1',
-        status: 'completed',
-    },
-    {
-        id: 2,
-        title: 'Project 2',
-        description: 'This is a description for project 2',
-        image: './vercel.svg',
-        link: variable.URL + '/project/2',
-        status: 'in-progress',
-    },
-    {
-        id: 3,
-        title: 'Project 3',
-        description: 'This is a description for project 3',
-        image: './vercel.svg',
-        link: variable.URL + '/project/3',
-        status: 'in-progress',
-    },
-    {
-        id: 4,
-        title: 'Project 4',
-        description: 'This is a description for project 4',
-        image: './vercel.svg',
-        link: variable.URL + '/project/4',
-        status: 'in-progress',
-    },
-    {
-        id: 5,
-        title: 'Project 5',
-        description: 'This is a description for project 5',
-        image: './vercel.svg',
-        link: variable.URL + '/project/5',
-        status: 'planned',
-    },
-    {
-        id: 6,
-        title: 'Project 6',
-        description: 'This is a description for project 6',
-        image: './vercel.svg',
-        link: variable.URL + '/project/6',
-        status: 'in-progress',
-    },
-    {
-        id: 7,
-        title: 'Project 7',
-        description: 'This is a description for project 7',
-        image: './vercel.svg',
-        link: variable.URL + '/project/7',
-        status: 'in-progress',
-    },
-    {
-        id: 8,
-        title: 'Project 8',
-        description: 'This is a description for project 8',
-        image: './vercel.svg',
-        link: variable.URL + '/project/8',
-        status: 'in-progress',
-    },
-    {
-        id: 9,
-        title: 'Project 9',
-        description: 'This is a description for project 9',
-        image: './vercel.svg',
-        link: variable.URL + '/project/9',
-        status: 'in-progress',
-    },
-]
+// const projects = [
+//     {
+//         id: 1,
+//         title: 'Project 1',
+//         description: 'This is a description for project 1',
+//         image: './vercel.svg',
+//         link: variable.URL + '/project/1',
+//         status: 'completed',
+//     },
+//     {
+//         id: 2,
+//         title: 'Project 2',
+//         description: 'This is a description for project 2',
+//         image: './vercel.svg',
+//         link: variable.URL + '/project/2',
+//         status: 'in-progress',
+//     },
+//     {
+//         id: 3,
+//         title: 'Project 3',
+//         description: 'This is a description for project 3',
+//         image: './vercel.svg',
+//         link: variable.URL + '/project/3',
+//         status: 'in-progress',
+//     },
+//     {
+//         id: 4,
+//         title: 'Project 4',
+//         description: 'This is a description for project 4',
+//         image: './vercel.svg',
+//         link: variable.URL + '/project/4',
+//         status: 'in-progress',
+//     },
+//     {
+//         id: 5,
+//         title: 'Project 5',
+//         description: 'This is a description for project 5',
+//         image: './vercel.svg',
+//         link: variable.URL + '/project/5',
+//         status: 'planned',
+//     },
+//     {
+//         id: 6,
+//         title: 'Project 6',
+//         description: 'This is a description for project 6',
+//         image: './vercel.svg',
+//         link: variable.URL + '/project/6',
+//         status: 'in-progress',
+//     },
+//     {
+//         id: 7,
+//         title: 'Project 7',
+//         description: 'This is a description for project 7',
+//         image: './vercel.svg',
+//         link: variable.URL + '/project/7',
+//         status: 'in-progress',
+//     },
+//     {
+//         id: 8,
+//         title: 'Project 8',
+//         description: 'This is a description for project 8',
+//         image: './vercel.svg',
+//         link: variable.URL + '/project/8',
+//         status: 'in-progress',
+//     },
+//     {
+//         id: 9,
+//         title: 'Project 9',
+//         description: 'This is a description for project 9',
+//         image: './vercel.svg',
+//         link: variable.URL + '/project/9',
+//         status: 'in-progress',
+//     },
+// ]
 
 
 export default function Gallery() {
@@ -112,7 +112,7 @@ export default function Gallery() {
                                 id={project.id}
                                 title={project.title}
                                 status={project.status}
-                                description={project.description}
+                                description={project.content.slice(0, 120) + '...'}
                                 image={project.image}
                                 link={project.link}
                             />

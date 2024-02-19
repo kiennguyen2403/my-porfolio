@@ -3,6 +3,7 @@ import InformationSection from "./components/information-section/information-sec
 import AboutMe from "./components/about-me-section/about-me";
 import Technologies from "./components/technologies-section/technologies";
 import Projects from "./components/projects-section/projects";
+import { Scrollbar } from 'react-scrollbars-custom';
 
 export default function Home() {
   return (

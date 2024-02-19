@@ -27,6 +27,7 @@
     "react-dom": "^18",
     "react-github-calendar": "^4.1.1",
     "react-material-ui-carousel": "^3.4.2",
+    "react-scrollbars-custom": "^4.1.1",
     "react-visibility-sensor": "^5.1.1",
     "react-youtube": "^10.1.0",
     "styled-components": "^6.1.8",
