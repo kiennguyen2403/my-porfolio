@@ -50,7 +50,7 @@ export default function ThemeProviderWrapper(props) {
     return (
         <CacheProvider value={cache}>
             <ThemeProvider theme={theme}>
-                <CssBaseline />
+                <CssBaseline enableColorScheme/>
                 {children}
             </ThemeProvider>
         </CacheProvider>
