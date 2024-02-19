@@ -18,8 +18,8 @@ const Loading = () => {
                 alignItems: 'center',
                 width: '100%',
             }}>
-                <Skeleton variant="text" sx={{ fontSize: '4rem', textAlign: "center" }} width="30%" />
-                <Skeleton variant="circular" width="6rem" height="6rem" />
+                <Skeleton variant="text" sx={{ fontSize: '5rem', textAlign: "center" }} width="30%" />
+                <Skeleton variant="circular" width="10rem" height="10rem" />
             </Box>
             <Skeleton variant="text" sx={{ fontSize: '4rem', textAlign: "center" }} />
             <Skeleton variant="rectangular" width="80vw" height="30vh" />
