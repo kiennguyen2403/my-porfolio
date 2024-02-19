@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SummarizeIcon from '@mui/icons-material/Summarize';
 import EmailIcon from '@mui/icons-material/Email';
-
+import { variable } from "@/app/lib/variable";
 
 export default function InformationSection({ id }) {
     return (
@@ -28,7 +28,13 @@ export default function InformationSection({ id }) {
                 </Typography>
                 <TypeWriter text={["Software Engineer", "Full-Stack Developer", "Mobile Developer"]} />
                 <Stack direction="row" spacing={2} >
-                    <Button variant="outlined" startIcon={<SummarizeIcon />}>
+                    <Button
+                        onClick={() => {
+                            const resumeUrl = variable.URL + '/documents/resume.pdf';
+                            window.location.href = resumeUrl;
+                        }}
+                        variant="outlined"
+                        startIcon={<SummarizeIcon />}>
                         Resume
                     </Button>
 
