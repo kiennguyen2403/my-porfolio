@@ -1,13 +1,20 @@
 'use client';
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import createCache from '@emotion/cache';
 import { useServerInsertedHTML } from 'next/navigation';
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import darktheme from './darktheme';
 import theme from './theme';
 
+
+export const ThemeContext = createContext({
+    switchColorMode: () => { },
+});
+
 export default function ThemeProviderWrapper(props) {
+    const [mode, setMode] = useState('dark');
     const { options, children } = props;
     const [{ cache, flush }] = useState(() => {
         const cache = createCache(options);
@@ -28,6 +35,12 @@ export default function ThemeProviderWrapper(props) {
         };
         return { cache, flush };
     });
+
+
+    const switchColorMode = () => {
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+    };
+
     useServerInsertedHTML(() => {
         const names = flush();
         if (names.length === 0) {
@@ -49,10 +62,12 @@ export default function ThemeProviderWrapper(props) {
     });
     return (
         <CacheProvider value={cache}>
-            <ThemeProvider theme={theme}>
-                <CssBaseline enableColorScheme/>
-                {children}
-            </ThemeProvider>
+            <ThemeContext.Provider value={{ switchColorMode }}>
+                <ThemeProvider theme={mode == "dark" ? darktheme : theme}>
+                    <CssBaseline enableColorScheme />
+                    {children}
+                </ThemeProvider>
+            </ThemeContext.Provider>
         </CacheProvider>
     );
 }

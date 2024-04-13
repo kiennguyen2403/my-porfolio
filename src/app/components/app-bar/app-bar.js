@@ -15,8 +15,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation'
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { ThemeContext } from '@/styles/theme-provider-wrapper';
+import { useTheme } from '@mui/material/styles';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'Project', 'About', 'Blog',];
@@ -25,6 +28,8 @@ function DrawerAppBar(props) {
     const router = useRouter()
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const theme = useTheme();
+    const { switchColorMode } = React.useContext(ThemeContext);
     const [isClient, setIsClient] = React.useState(false);
 
     React.useEffect(() => {
@@ -52,7 +57,7 @@ function DrawerAppBar(props) {
             }}>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
-                        <ListItemButton onClick={()=>{
+                        <ListItemButton onClick={() => {
                             if (item === 'Home')
                                 router.push('/');
                             else
@@ -103,6 +108,9 @@ function DrawerAppBar(props) {
                                 {item}
                             </Button>
                         ))}
+                        <IconButton sx={{ ml: 1 }} onClick={switchColorMode} color="inherit">
+                            {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                        </IconButton>
                     </Box>
                 </Toolbar>
             </AppBar>
@@ -120,6 +128,7 @@ function DrawerAppBar(props) {
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                     }}
                 >
+                    
                     {drawer}
                 </Drawer>
             </nav>

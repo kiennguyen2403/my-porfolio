@@ -123,7 +123,7 @@ export default function Technologies({ id }) {
                             <Typography variant="h6" component="div">
                                 Frontend
                             </Typography>
-                            <Stack container spacing={2} sx={{
+                            <Stack spacing={2} sx={{
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'center',

@@ -60,7 +60,7 @@ export const projects = [
     id: 4,
     title: "Smart Kerbside Parking Utilisation App",
     content: `Smart Kerbside Parking Utilisation App is a scalable prototype system using Melbourne's parking data API. The goal of the project is to help drivers find available parking spots in real-time. It also assists drivers to reduce the time and hassle of finding parking spaces, while also improving the utilisation of kerbside parking `,
-    mediaID: "7sBN_cT3w6k",
+    mediaID: "",
     status: "completed",
     image: "./images/parking.jpg",
     link: variable.URL + '/project/4',

@@ -1,9 +1,10 @@
 import { darkScrollbar } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
+
+const darktheme = createTheme({
     palette: {
-        mode: "light",
+        mode: "dark"
     },
     typography: {
         fontFamily: "monospace"
@@ -19,8 +20,7 @@ const theme = createTheme({
         MuiCssBaseline: {
             styleOverrides: {
                 body: {
-                    backgroundColor: "#d5d4d0",
-                    background: 'linear-gradient(to right,#d5d4d0, #d5d4d0, #eeeeec)',
+                    background: 'linear-gradient(to right, #434343 0%, black 100%)',
                 },
                 '@global': darkScrollbar(),
                 '*::-webkit-scrollbar': {
@@ -37,4 +37,4 @@ const theme = createTheme({
 
 });
 
-export default theme;
+export default darktheme;
