@@ -10,7 +10,7 @@ import {
     Grow
 } from "@mui/material";
 import React, { useState } from "react";
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 import VizSensor from 'react-visibility-sensor';
 
 const Status = {

@@ -1,4 +1,5 @@
 import { variable } from "@/app/lib/variable";
+
 export const projects = [
   { 
     id : 1,
