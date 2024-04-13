@@ -69,9 +69,6 @@ export default function Work({ params }) {
                                     variant="contained"
                                     href={projects[id - 1]?.deploy}
                                     target="_blank"
-                                    sx={{
-                                        width: '100%',
-                                    }}
                                 >
                                     <Link />
                                 </IconButton>
