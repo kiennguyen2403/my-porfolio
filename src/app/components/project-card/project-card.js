@@ -24,7 +24,7 @@ export default function ProjectCard({ title, description, image, link }) {
                 component="img"
                 alt="green iguana"
                 height="130"
-                image="./vercel.svg"
+                image={image ?? "./vercel.svg"}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -35,7 +35,7 @@ export default function ProjectCard({ title, description, image, link }) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" onClick={()=>{
+                <Button size="small" onClick={() => {
                     if (link)
                         router.push(link)
                 }}>

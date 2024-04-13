@@ -48,7 +48,7 @@ export default function ProjectCard({ title, description, image, link, status })
                         component="img"
                         alt="green iguana"
                         height="130"
-                        image="./vercel.svg"
+                        image={image ?? "./vercel.svg"}
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">

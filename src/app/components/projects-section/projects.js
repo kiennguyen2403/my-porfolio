@@ -1,4 +1,3 @@
-"use client";
 import { Stack, Typography } from "@mui/material";
 import ProjectCard from "../project-card/project-card";
 import Carousel from "react-material-ui-carousel";
@@ -20,8 +19,8 @@ export default function Projects({ id }) {
                 Projects
             </Typography>
             <Carousel sx={{
-                width: '45%',
-                height: '200%',
+                width: '40%',
+                height: '100%',
                 justifyContent: 'center',
                 alignItems: 'center',
             }}>
