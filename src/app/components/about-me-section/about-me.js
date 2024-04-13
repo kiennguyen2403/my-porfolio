@@ -9,7 +9,7 @@ export default function AboutMe({ id }) {
         <VizSensor onChange={(isVisible) => {
             setIsVisible(isVisible);
         }}>
-            <Fade in={isVisible} timeout={1000}>
+            <Fade in={isVisible} timeout={600}>
                 <Stack
                     id={id}
                     spacing='1rem'

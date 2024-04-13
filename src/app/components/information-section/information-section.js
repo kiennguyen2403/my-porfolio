@@ -10,20 +10,45 @@ import { variable } from "@/app/lib/variable";
 
 export default function InformationSection({ id }) {
     return (
-        <Box
+        <Stack
             id={id}
+            direction={{ xs: 'column', md: 'row' }}
             sx={{
-                display: 'flex',
-                direction: 'row',
                 justifyContent: 'space-around',
                 alignItems: 'center',
-                width: '100%',
+                width: '70%',
             }}>
-            <Stack spacing={2} direction="column" sx={{
-                alignItems: 'start',
+            <Box>
+                <Avatar
+                    alt="Kien Nguyen"
+                    src="/images/avatar.png"
+                    sx={{
+                        width: 300,
+                        height: 300,
+                    }} />
+            </Box>
+            <Stack
+                spacing={2}
+                direction="column"
+                sx={{
+                    alignItems: 'start',
+                    '@media (max-width: 600px)': {
+                        alignItems: 'center',
+                        marginTop: '1rem',
+                    },
+                }}
+            >
+                <Typography
+                    variant="h4"
+                    component="div"
 
-            }}>
-                <Typography variant="h4" component="div">
+                    sx={{
+                        textAlign: 'start',
+                        '@media (max-width: 600px)': {
+                            marginTop: '1rem',
+                            textAlign: 'center',
+                        },
+                    }}>
                     Nguyen Trung Kien
                 </Typography>
                 <TypeWriter text={["Software Engineer", "Full-Stack Developer", "Mobile Developer"]} />
@@ -55,16 +80,7 @@ export default function InformationSection({ id }) {
                     </IconButton>
                 </Stack>
             </Stack>
-            <Box>
-                <Avatar
-                    alt="Kien Nguyen"
-                    src="/images/avatar.jpg"
-                    sx={{
-                        width: 150,
-                        height: 150,
-                    }} />
-            </Box>
-        </Box>
+        </Stack>
 
     )
 }

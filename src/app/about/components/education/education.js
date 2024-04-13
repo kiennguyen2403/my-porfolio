@@ -23,7 +23,7 @@ export default function Education() {
         <VizSensor onChange={(isVisible) => {
             setIsVisible(isVisible);
         }}>
-            <Fade in={isVisible} timeout={1000}>
+            <Fade in={isVisible} timeout={600}>
                 <Stack
                     spacing='1rem'
                     sx={{

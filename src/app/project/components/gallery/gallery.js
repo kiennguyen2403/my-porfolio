@@ -31,7 +31,7 @@ export default function Gallery() {
             }}>
                 <Grid container spacing={4}>
                     {projects.map((project, i) => (
-                        <Grid item xs={4} sm={6} md={4} key={i}>
+                        <Grid item xs={12} sm={6} md={4} key={i}>
                             <ProjectCard
                                 id={project.id}
                                 title={project.title}

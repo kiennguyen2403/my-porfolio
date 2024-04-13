@@ -100,7 +100,7 @@ export default function Technologies({ id }) {
             onChange={(isVisible) => {
                 setIsVisible(isVisible);
             }}>
-            <Fade in={isVisible} timeout={1000}>
+            <Fade in={isVisible} timeout={600}>
                 <Stack
                     id={id}
                     spacing="0.8rem"
@@ -112,8 +112,8 @@ export default function Technologies({ id }) {
                     <Typography variant="h4" component="div">
                         Technologies
                     </Typography>
-                    <Grid container spacing="2rem">
-                        <Grid item xs={2} sm={6} md={4} sx={{
+                    <Grid container spacing={2}>
+                        <Grid item xs={12} sm={6} md={4} sx={{
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'center',
@@ -141,7 +141,7 @@ export default function Technologies({ id }) {
                                 ))}
                             </Stack>
                         </Grid>
-                        <Grid item xs={2} sm={6} md={4} sx={{
+                        <Grid item xs={12} sm={6} md={4} sx={{
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'center',
@@ -172,7 +172,7 @@ export default function Technologies({ id }) {
                                 ))}
                             </Stack>
                         </Grid>
-                        <Grid item xs={2} sm={6} md={4} sx={{
+                        <Grid item xs={12} sm={6} md={4} sx={{
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'center',
@@ -203,7 +203,7 @@ export default function Technologies({ id }) {
                                 ))}
                             </Stack>
                         </Grid>
-                        <Grid item xs={2} sm={6} md={4} sx={{
+                        <Grid item xs={12} sm={6} md={4} sx={{
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'center',
@@ -234,7 +234,7 @@ export default function Technologies({ id }) {
                                 ))}
                             </Stack>
                         </Grid>
-                        <Grid item xs={2} sm={6} md={4} sx={{
+                        <Grid item xs={12} sm={6} md={4} sx={{
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'center',
@@ -265,7 +265,7 @@ export default function Technologies({ id }) {
                                 ))}
                             </Stack>
                         </Grid>
-                        <Grid item xs={2} sm={6} md={4} sx={{
+                        <Grid item xs={12} sm={6} md={4} sx={{
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'center',

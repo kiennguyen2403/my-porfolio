@@ -35,7 +35,7 @@ export default function ProjectCard({ title, description, image, link, status })
         <VizSensor onChange={(isVisible) => {
             setIsVisible(isVisible);
         }}>
-            <Grow in={isVisible} timeout={1000}>
+            <Grow in={isVisible} timeout={600}>
                 <Card
                     sx={{
                         width: '100%',

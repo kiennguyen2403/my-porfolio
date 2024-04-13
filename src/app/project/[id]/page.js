@@ -84,13 +84,10 @@ export default function Work({ params }) {
                             ? <YouTube 
                             videoId={projects[id - 1].mediaID}
                             opts={{
-                                height: '390',
-                                width: '640',
+                                margin: 'auto',
+                                height: '640',
+                                width: '100%',
                                 borderRadius: '10px',
-                                playerVars: {
-                                    // https://developers.google.com/youtube/player_parameters
-                                    autoplay: 1,
-                                },
                             }}/> 
                         : null
                     }

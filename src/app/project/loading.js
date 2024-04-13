@@ -18,23 +18,27 @@ const Loading = () => {
                 alignItems: 'center',
                 width: '80vw',
             }}>
-                <Grid container spacing={4}>
-                    <Grid item xs={4} sm={6} md={4}>
+                <Grid container spacing={{
+                    xs: 0,
+                    md: 3,
+                    sm: 2,
+                }}>
+                    <Grid item xs={12} sm={6} md={4}>
                         <Skeleton variant="rounded" width="20vw" height="20vh" />
                     </Grid>
-                    <Grid item xs={4} sm={6} md={4}>
+                    <Grid item xs={12} sm={6} md={4}>
                         <Skeleton variant="rounded" width="20vw" height="20vh" />
                     </Grid>
-                    <Grid item xs={4} sm={6} md={4}>
+                    <Grid item xs={12} sm={6} md={4}>
                         <Skeleton variant="rounded" width="20vw" height="20vh" />
                     </Grid>
-                    <Grid item xs={4} sm={6} md={4}>
+                    <Grid item xs={12} sm={6} md={4}>
                         <Skeleton variant="rounded" width="20vw" height="20vh" />
                     </Grid>
-                    <Grid item xs={4} sm={6} md={4}>
+                    <Grid item xs={12} sm={6} md={4}>
                         <Skeleton variant="rounded" width="20vw" height="20vh" />
                     </Grid>
-                    <Grid item xs={4} sm={6} md={4}>
+                    <Grid item xs={12} sm={6} md={4}>
                         <Skeleton variant="rounded" width="20vw" height="20vh" />
                     </Grid>
 
