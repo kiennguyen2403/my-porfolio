@@ -36,12 +36,30 @@ function DrawerAppBar(props) {
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Box onClick={handleDrawerToggle}
+            sx={{
+                textAlign: 'center',
+                height: '100%',
+            }}>
+            <Typography variant="h6" sx={{ my: 2 }}>
+                My Portfolio
+            </Typography>
             <Divider />
-            <List>
+            <List sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
+            }}>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
-                        <Link href={`/${item.toLowerCase()}`} />
+                        <ListItemButton onClick={()=>{
+                            if (item === 'Home')
+                                router.push('/');
+                            else
+                                router.push(`/${item.toLowerCase()}`)
+                        }}>
+                            <ListItemText primary={item} />
+                        </ListItemButton>
                     </ListItem>
                 ))}
             </List>
@@ -64,6 +82,13 @@ function DrawerAppBar(props) {
                     >
                         <MenuIcon />
                     </IconButton>
+                    <Typography
+                        variant="h6"
+                        component="div"
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                    >
+                        My Portfolio
+                    </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
                             <Button
