@@ -55,7 +55,8 @@ export default function InformationSection({ id }) {
                 <Stack direction="row" spacing={2} >
                     <Button
                         onClick={() => {
-                            const resumeUrl = window.location.href + '/documents/resume.pdf';
+                            const resumeUrl = window.location.href.toString().replace("/about", "") + '/documents/resume.pdf';
+                            resumeUrl.replace('/about', '');
                             window.location.href = resumeUrl;
                         }}
                         variant="outlined"

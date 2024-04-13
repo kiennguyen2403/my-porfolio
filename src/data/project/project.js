@@ -1,8 +1,28 @@
 import { variable } from "@/app/lib/variable";
 
 export const projects = [
-  { 
-    id : 1,
+  {
+    id: 0,
+    title: "Troubadour",
+    content: `Troubadour is a cross-platform application that aims to provide a platform for musicians to connect with their audience. It allows musicians to create and manage their events, and for users to discover and attend these events. `,
+    mediaID: "926vtMR3zGw&t=5s",
+    status: "completed",
+    link: variable.URL + '/project/0',
+    github: "https://github.com/kiennguyen2403/Troubadour",
+    deploy: "",
+    technologies: [
+      "NextJS",
+      "React Native Expo",
+      "Convex",
+      "Mux",
+      "Stripe",
+      "Clerk",
+      "Google Maps API",
+      "Vercel"
+    ]
+  },
+  {
+    id: 1,
     title: "VersionFlow",
     mediaID: "7pXZerDFpKo",
     status: "completed",
@@ -24,7 +44,7 @@ export const projects = [
     status: "in-progress",
     link: variable.URL + '/project/2',
     github: "https://github.com/kiennguyen2403/culina",
-    deploy : "",
+    deploy: "",
     technologies: [
       "NextJS",
       "TailwindCSS",
@@ -41,7 +61,7 @@ export const projects = [
     status: "completed",
     link: variable.URL + '/project/3',
     github: "https://github.com/swinPatrick/Smart_Kerbside_Parking_Utilisation_App",
-    deploy : "",
+    deploy: "",
     technologies: [
       "Native Android (Kotlin)",
       "Spring Boot",
@@ -66,31 +86,13 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Troubadour",
-    content: `Troubadour is a mobile application that aims to provide a platform for musicians to connect with their audience. It allows musicians to create and manage their events, and for users to discover and attend these events. `,
-    mediaID: "7sBN_cT3w6k",
-    status: "in-progress",
-    link: variable.URL + '/project/5',
-    github: "https://github.com/kiennguyen2403/Troubadour",
-    deploy : "",
-    technologies: [
-      "React",
-      "Android Native (Java)",
-      "SwiftUI",
-      "ExpressJS",
-      "MongoDB",
-      "Kong Gateway",
-    ]
-  },
-  {
-    id: 6,
     title: "Echo- Cross-platform Audio Processing Application",
     content: `Echo is a cross-platform audio processing application that allows users to record, edit, and share audio files. It also provides a platform for users to collaborate on audio projects. `,
     mediaID: "7sBN_cT3w6k",
     status: "in-progress",
     link: variable.URL + '/project/6',
     github: "https://github.com/thelazyant164/Echo",
-    deploy : "",
+    deploy: "",
     technologies: [
       "React Native",
       "React",
