@@ -17,7 +17,7 @@ export default function Error({ error, reset }) {
             alignItems: 'center',
             height: '100vh',
             width: '100vw',
-        
+            margin: '2rem',    
         }}>
             <Typography variant="h4" component="div">
                 Something went wrong

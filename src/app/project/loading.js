@@ -4,15 +4,18 @@ import { Box, Card, Grid, Skeleton, Stack } from "@mui/material";
 const Loading = () => {
     return (
         <Stack
-            spacing='3rem'
+            spacing={3}
             sx={{
+
                 width: '100vw',
                 display: 'flex',
                 direction: 'row',
+                justifyContent: 'center',
                 alignItems: 'center',
-                margin: "auto"
+                margin: "auto",
+                marginTop: "10rem",
             }}>
-            <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+            <Skeleton variant="text" sx={{ fontSize: '3rem', textAlign: "center" }} width="30%" height="10%" />
             <Box sx={{
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -24,22 +27,22 @@ const Loading = () => {
                     sm: 2,
                 }}>
                     <Grid item xs={12} sm={6} md={4}>
-                        <Skeleton variant="rounded" width="20vw" height="20vh" />
+                        <Skeleton variant="rounded" width="100%" height="10vh" />
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
-                        <Skeleton variant="rounded" width="20vw" height="20vh" />
+                        <Skeleton variant="rounded" width="100%" height="10vh" />
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
-                        <Skeleton variant="rounded" width="20vw" height="20vh" />
+                        <Skeleton variant="rounded" width="100%" height="10vh" />
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
-                        <Skeleton variant="rounded" width="20vw" height="20vh" />
+                        <Skeleton variant="rounded" width="100%" height="10vh" />
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
-                        <Skeleton variant="rounded" width="20vw" height="20vh" />
+                        <Skeleton variant="rounded" width="100%" height="10vh" />
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
-                        <Skeleton variant="rounded" width="20vw" height="20vh" />
+                        <Skeleton variant="rounded" width="100%" height="10vh" />
                     </Grid>
 
                 </Grid>

@@ -3,27 +3,42 @@ import { Skeleton, Stack, Box } from "@mui/material";
 
 const Loading = () => {
     return (
-        <Stack spacing={1} sx={{
-            margin: "2rem",
-            marginTop: "5rem",
-        }}>
-            {/* For variant="text", adjust the height via font-size */}
-
-            {/* For other variants, adjust the size with `width` and `height` */}
+        <Stack
+            spacing={1}
+            sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '100%',
+            }}>
             <Stack
                 direction={{ xs: 'column', md: 'row' }}
                 sx={{
                     justifyContent: 'space-around',
                     alignItems: 'center',
-                    width: '70%',
+                    width: '100%',
                 }}>
-                <Skeleton variant="circular" width="10rem" height="10rem" />
-                <Skeleton variant="text" sx={{ fontSize: '5rem', textAlign: "center" }} width="30%" />
-               
+                <Box>
+                    <Skeleton variant="circular" width={300} height={300} />
+                </Box>
+                <Stack
+                    spacing={2}
+                    direction="column"
+                    sx={{
+                        alignItems: 'start',
+                        '@media (max-width: 600px)': {
+                            alignItems: 'center',
+                            marginTop: '1rem',
+                        },
+                    }}>
+                    <Skeleton variant="text" sx={{ fontSize: '2rem', textAlign: "center" }} width={300} />
+                    <Skeleton variant="text" sx={{ fontSize: '2rem', textAlign: "center" }} width={200} />
+                    <Skeleton variant="text" sx={{ fontSize: '1rem', textAlign: "center" }} width={200} />
+                </Stack>
+
             </Stack>
-            <Skeleton variant="text" sx={{ fontSize: '4rem', textAlign: "center" }} />
+            <Skeleton variant="text" sx={{ fontSize: '3rem', textAlign: "center" }} width="80vw" />
             <Skeleton variant="rectangular" width="80vw" height="30vh" />
-            <Skeleton variant="rounded" width="90vw" height="20vh" />
         </Stack>
     );
 };
