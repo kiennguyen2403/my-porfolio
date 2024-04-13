@@ -5,7 +5,7 @@ export const projects = [
     id: 1,
     title: "Troubadour",
     content: `Troubadour is a cross-platform application that aims to provide a platform for musicians to connect with their audience. It allows musicians to create and manage their events, and for users to discover and attend these events. `,
-    mediaID: "926vtMR3zGw&t=5s",
+    mediaID: "926vtMR3zGw",
     status: "completed",
     link: variable.URL + '/project/1',
     github: "https://github.com/kiennguyen2403/troubadour-convex",
