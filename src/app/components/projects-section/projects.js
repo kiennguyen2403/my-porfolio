@@ -31,7 +31,7 @@ export default function Projects({ id }) {
                         title={project.title}
                         description={project.content.slice(0, 120) + '...'}
                         image={project.image}
-                        link={project.link}
+                        link={ 'https://my-porfolio-black.vercel.app/project/' + project.id}
                     />
                 ))}
             </Carousel>
