@@ -1,3 +1,4 @@
+"use client";
 import { Stack, Typography } from "@mui/material";
 import ProjectCard from "../project-card/project-card";
 import Carousel from "react-material-ui-carousel";
