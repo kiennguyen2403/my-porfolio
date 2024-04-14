@@ -20,7 +20,13 @@ export default function Projects({ id }) {
                 Projects
             </Typography>
             <Carousel sx={{
-                width: '40%',
+                width: {
+                    xs: '80%',
+                    sm: '80%',
+                    md: '60%',
+                    lg: '50%',
+                    xl: '40%',
+                },
                 height: '100%',
                 justifyContent: 'center',
                 alignItems: 'center',
