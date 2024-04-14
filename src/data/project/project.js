@@ -78,6 +78,7 @@ export const projects = [
     title: "Miachan- Hotels Booking System",
     content: `Miachan is a hotel booking system that allows users to search for hotels, view hotel details, and make reservations. The system also provides a dashboard for hotel owners to manage their hotel's information and bookings. `,
     mediaID: "",
+    image: "./images/miachan.jpg",
     status: "completed",
     link: variable.URL + '/project/5',
     github: "https://github.com/daothanhduy305/miachan_go_strapi",
@@ -91,6 +92,7 @@ export const projects = [
   {
     id: 6,
     title: "Echo- Cross-platform Audio Processing Application",
+    images: "./images/echo.jpg",
     content: `Echo is a cross-platform audio processing application that allows users to record, edit, and share audio files. It also provides a platform for users to collaborate on audio projects. `,
     mediaID: "",
     status: "in-progress",

@@ -108,10 +108,13 @@ function DrawerAppBar(props) {
                                 {item}
                             </Button>
                         ))}
-                        <IconButton sx={{ ml: 1 }} onClick={switchColorMode} color="inherit">
-                            {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-                        </IconButton>
+
                     </Box>
+                    <IconButton sx={{
+                        marginLeft: 'auto',
+                    }} onClick={switchColorMode} color="inherit">
+                        {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                    </IconButton>
                 </Toolbar>
             </AppBar>
             <nav>
@@ -128,7 +131,7 @@ function DrawerAppBar(props) {
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                     }}
                 >
-                    
+
                     {drawer}
                 </Drawer>
             </nav>
