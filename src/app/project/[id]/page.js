@@ -78,15 +78,15 @@ export default function Work({ params }) {
                     <Divider sx={{ width: '100%' }} />
                     {
                         projects?.[id - 1]?.mediaID
-                            ? <YouTube 
-                            videoId={projects[id - 1].mediaID}
-                            opts={{
-                                margin: 'auto',
-                                height: '640',
-                                width: '100%',
-                                borderRadius: '10px',
-                            }}/> 
-                        : null
+                            ? <YouTube
+                                videoId={projects[id - 1].mediaID}
+                                opts={{
+                                    margin: 'auto',
+                                    height: '640',
+                                    width: '100%',
+                                    borderRadius: '10px',
+                                }} />
+                            : null
                     }
                     <Box sx={{ width: '100%' }}>
                         <Typography
@@ -114,10 +114,15 @@ export default function Work({ params }) {
                             }}>
                             Technologies
                         </Typography>
-                        <Stack spacing={1}
-                            direction="row" sx={{
+                        <Stack
+                            gap={1}
+                            rowGap={0.5}
+                            direction="row"
+                            sx={{
                                 marginTop: '1rem',
-                            }}>
+                            }}
+                            flexWrap="wrap"
+                        >
                             {projects[id - 1]?.technologies?.map((item) => (
                                 <TechnologyCard key={item} technology={item} />
                             ))}
