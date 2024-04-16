@@ -114,14 +114,15 @@ export default function Work({ params }) {
                             }}>
                             Technologies
                         </Typography>
-                        <Stack spacing={1}
-                            direction= {{
-                                xs: 'column',
-                                sm: 'row',
-                            }}
+                        <Stack
+                            gap={1}
+                            rowGap={0.5}
+                            direction="row"
                             sx={{
                                 marginTop: '1rem',
-                            }}>
+                            }}
+                            flexWrap="wrap"
+                        >
                             {projects[id - 1]?.technologies?.map((item) => (
                                 <TechnologyCard key={item} technology={item} />
                             ))}
