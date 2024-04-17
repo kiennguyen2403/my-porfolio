@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import DrawerAppBar from './components/app-bar/app-bar';
 import Footer from './components/footer/footer';
 import ThemeProviderWrapper from '@/styles/theme-provider-wrapper';
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
               alignItems: 'center',
             }}>
               {children}
+              <Analytics/>
             </div>
             <div style={{
               bottom: 0,
